@@ -2,7 +2,8 @@
 boolean inandroid = false;
 boolean keybisopen = false;
 float scand = 1;
-String [] roomsIN =  {"Li", "Be", "Ba", "Ki"};
+String [] roomsIN =  { "Be","Ba"};
+//String [] roomsIN =  {"Li", "Be", "Ba", "Ki"};
 //String [] rooms = {"Li", "Be", "Ba", "Ki"};  //0:code 1:name 2:area
 //String [] rooms = {"Be","Ki"};
 int [] lockIN = {0, 0};
@@ -13,13 +14,17 @@ String [][] roomDATA=getroomDATA(rooms, roomDATAIN);
 int [] lockgenes = getroomLOCKS(rooms, lockIN);
 
 void setup(){
-  size(360,640);  
+  size(360,640);
+  //size(640,360);
+  setupsl(rooms, roomDATA);
   setupUI();
 }
 void draw(){
   background(255);
+  //drawsl();
   drawUI();
 }
-void mouseClicked(){
+void mousePressed(){
   pressUI();
+ presssl();
 }

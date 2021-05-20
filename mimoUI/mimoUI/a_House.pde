@@ -80,7 +80,7 @@ class House {
     calcreals();
     calcsubparamminmax();
     calchouse();
-    strechzones();
+    //strechzones();
     calcborders();
     calcreals();
     calcfit();
@@ -182,7 +182,7 @@ class House {
   }
   void displayhouse() {
     //for (int h=0; h<homedges.size(); h++) homedges.get(h).displaycolor();
-    for (int n=0; n<no.size(); n++) no.get(n).displaymuebles();
+    if (drawFurniture) for (int n=0; n<no.size(); n++) no.get(n).displaymuebles();
     for (int n=0; n<no.size(); n++) no.get(n).displayrooms();
   }
 

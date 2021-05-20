@@ -4,7 +4,7 @@ float grscale, grunit;
 void setupgr() {
   grpos = new PVector(0*scand,60*scand);
   grsize= new PVector((width), (height*0.5)-(60*scand));
-  grscale =40*scand;
+  grscale =30*scand;
   grunit =.8;
 }
 void drawgr() {
@@ -44,11 +44,13 @@ float rg(float fin) {
   fout = roundit(fout-(fout%grunit), 2);
   return fout;
 }
+//used to scale grid
 void grscaleDEhouse(House hoin){
   float grscaleX = grsize.x/housesizex0y1(ho,0);
   float grscaleY = grsize.y/housesizex0y1(ho,1);
-  if (grscaleX<grscaleY) grscale = grscaleX;
-  else grscale = grscaleY;
+  //if (grscaleX<grscaleY) grscale = grscaleX;
+  //else grscale = grscaleY;
+  
   //println("x:"+grsize.x/grscale+ " y:" +grsize.y/grscale);
   //println("x:"+housesizex0y1(ho,0) + " y:" + housesizex0y1(ho,1));
   

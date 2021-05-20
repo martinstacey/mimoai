@@ -310,6 +310,8 @@ float calcstrechfactor(ArrayList <Node> no) {
   for (int n=0; n<no.size(); n++) if (no.get(n).isleaf) totidealarea +=float(no.get(n).ideals[2]);
   for (int n=0; n<no.size(); n++) if (no.get(n).isleaf) for (int z=0; z<no.get(n).zones.size(); z++) tothousearea += no.get(n).zones.get(z).area();
   if (totidealarea != 0&&tothousearea != 0) scfactor = totidealarea / tothousearea;
+    scfactor = 1;
+  
   return scfactor;
 }
 void removeemptyzones(ArrayList <Node> no) {
