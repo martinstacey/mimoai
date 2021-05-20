@@ -13,10 +13,10 @@ String [][] roomDATA=getroomDATA(rooms, roomDATAIN);
 int [] lockgenes = getroomLOCKS(rooms, lockIN);
 
 void setup() {
-  //size(640, 360);
-  fullScreen();
+  size(640, 360);
+  //fullScreen();
   orientation(LANDSCAPE);
-  scand = displayDensity;
+  scand = 1;
   inandroid = true;
   setupgr();
   setupho();
